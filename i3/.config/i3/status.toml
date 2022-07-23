@@ -1,0 +1,59 @@
+theme = "slick"
+icons = "awesome"
+
+
+[[block]]
+block = "custom"
+command = "i3-wakatime"
+interval = 60
+
+[[block]]
+block = "music"
+buttons = ["play", "next"]
+max_width = 15
+
+[[block]]
+block = "battery"
+interval = 10
+format = "{percentage}"
+
+[[block]]
+block = "memory"
+format_mem = "{mem_used}({mem_used_percents})"
+format_swap = "{swap_used}/{swap_total}({swap_used_percents})"
+display_type = "memory"
+icons = true
+clickable = true
+interval = 5
+warning_mem = 80
+warning_swap = 80
+critical_mem = 95
+critical_swap = 95
+
+# [[block]]
+# block = "memory"
+# display_type = "memory"
+# format_mem = "{Mup}%"
+# format_swap = "{SUp}%"
+
+[[block]]
+block = "cpu"
+interval = 5
+format = "{utilization}"
+
+[[block]]
+block = "sound"
+format = "{output_name} {volume}"
+[block.mappings]
+"alsa_output.pci-0000_00_1f.3.analog-stereo" = "🎧"
+
+[[block]]
+block = "time"
+interval = 30
+format = "%a %d/%m %R"
+
+[[block]]
+block = "weather"
+format = "{weather} ({location}) {temp}"
+service = { name = "openweathermap", api_key = "e3696f99ad7ee8e1eb0757878857dfb7", city_id = "2759794", units = "metric" }
+

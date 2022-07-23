@@ -1,0 +1,73 @@
+# Don't print a new line at the start of the prompt
+add_newline = true
+
+# Wait 10 milliseconds for starship to check files under the current directory.
+scan_timeout = 10
+
+format = """
+$username\
+$hostname\
+$shlvl\
+$directory\
+$kubernetes\
+$git_branch\
+$git_commit\
+$git_state\
+$git_status\
+$hg_branch\
+$docker_context\
+$package\
+$cmake\
+$dart\
+$dotnet\
+$elixir\
+$elm\
+$erlang\
+$golang\
+$helm\
+$java\
+$julia\
+$nim\
+$nodejs\
+$ocaml\
+$perl\
+$php\
+$purescript\
+$python\
+$ruby\
+$rust\
+$swift\
+$terraform\
+$zig\
+$nix_shell\
+$conda\
+$memory_usage\
+$aws\
+$gcloud\
+$openstack\
+$env_var\
+$crystal\
+$cmd_duration\
+$custom\
+$line_break\
+$lua\
+$jobs\
+$battery\
+$time\
+$status\
+$character"""
+
+# Replace the "❯" symbol in the prompt with "➜"
+[character] 
+success_symbol = "[λ](bold green)"
+error_symbol = "[✗](bold red)"
+
+[aws]
+disabled=true
+
+[gcloud]
+disabled=true
+
+[kubernetes]
+disabled=false
+format = 'on [⛵ $context \($namespace\)](dimmed green) '
