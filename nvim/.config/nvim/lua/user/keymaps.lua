@@ -26,7 +26,7 @@ keymap("n", "<C-k>", "<C-w>k", opts)
 keymap("n", "<C-l>", "<C-w>l", opts)
 
 -- Toggle tree
-keymap("n", "<leader>1", ":NvimTreeToggle<CR>", opts)
+keymap("n", "<leader>1", ":NvimTreeFindFileToggle<CR>", opts)
 
 -- Buffers List --
 keymap("n", "<leader>bb", ":Telescope buffers<CR>", opts)
